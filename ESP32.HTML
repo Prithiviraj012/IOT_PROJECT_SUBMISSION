@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>Water Consumption Dashboard</title>
+</head>
+<body>
+<header>
+<h1>Water Consumption Dashboard</h1>
+</header>
+<section id="data">
+<!-- Display water consumption data here -->
+</section>
+<section id="promotion">
+<!-- Promote water conservation efforts here -->
+</section>
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+}
+header {
+background-color: #0077b6;
+color: white;
+text-align: center;
+padding: 20px;
+}
+#data {
+margin: 20px;
+padding: 20px;
+background-color: #ffffff;
+border: 1px solid #ddd;
+}
+#promotion {
+margin: 20px;
+padding: 20px;
+background-color: #ffffff;
+border: 1px solid #ddd;
+}
+</style>
+<script>
+// Simulated data for demonstration purposes
+const waterData = [
+{ date: '2023-10-01', consumption: 150 },
+{ date: '2023-10-02', consumption: 130 },
+// Add more data here
+];
+
+function displayWaterData() {
+const dataSection = document.getElementById('data');
+dataSection.innerHTML = '<h2>Water Consumption Data</h2>';
+for (const entry of waterData) {
+const div = document.createElement('div');
+div.innerHTML = `<p>Date: ${entry.date}, Consumption: ${entry.consumption} gallons</p>`;
+dataSection.appendChild(div);
+}
+}
+
+function promoteConservationEfforts() {
+const promotionSection = document.getElementById('promotion');
+promotionSection.innerHTML = '<h2>Water Conservation Efforts</h2>';
+const tips = [
+'Fix any water leaks in your home promptly.',
+'Use low-flow faucets and showerheads to reduce water usage.',
+'Water your garden during the cooler parts of the day to minimize evaporation.',
+// Add more conservation tips here
+];
+for (const tip of tips) {
+const p = document.createElement('p');
+p.textContent = tip;
+promotionSection.appendChild(p);
+}
+}
+
+// Call the functions to display data and promote conservation efforts
+displayWaterData();
+promoteConservationEfforts();
+</script>
